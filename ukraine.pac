@@ -8,14 +8,12 @@ var nowall_proxy = function(){ return direct; };
 var ip_proxy = function(){ return wall_proxy(); };
 var ipv6_proxy = function(){ return wall_v6_proxy(); };
 
-var blocked_domains = {
-"ru": {
-  "ok":1,
-  "yandex":1,
-  "mail":1
-},
-"com": {
-  "vk":1
+var blocked_domains = {"ru":{
+"ok":1,
+"yandex":1,
+"mail":1
+},"com":{
+"vk":1
 }
 };
 
