@@ -68,3 +68,13 @@ function FindProxyForURL(url, host)
 	
 	return nowall_proxy();
 }
+
+function FindProxyForURLEx(url, host)
+{
+	if (isInDomains(blocked_domains, host) === true )
+	{
+		return wall_proxy();
+	}
+	
+	return nowall_proxy();
+}
