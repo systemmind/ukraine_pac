@@ -7,7 +7,7 @@ var wall_v6_proxy = function(){ return "__PROXY__"; };
 var nowall_proxy = function(){ return direct; };
 var ip_proxy = function(){ return wall_proxy(); };
 var ipv6_proxy = function(){ return wall_v6_proxy(); };
-
+/*
 var blocked_domains = {"ru":{
 "ok":1,
 "yandex":1,
@@ -56,23 +56,34 @@ function  (domain_dict, host)
 		pos = host.lastIndexOf('.', pos - 1);
 	}
 }
+*/
 
 function FindProxyForURL(url, host)
 {
+	if (dnsDomainIs("www.vk.com", ".vk.com"))
+	{
+		return wall_proxy();
+	}
+	/*
 	if (isInDomains(blocked_domains, host) === true )
 	{
 		return wall_proxy();
 	}
-	
+	*/
 	return nowall_proxy();
 }
 
 function FindProxyForURLEx(url, host)
 {
+	if (dnsDomainIs("www.vk.com", ".vk.com"))
+	{
+		return wall_proxy();
+	}
+	/*
 	if (isInDomains(blocked_domains, host) === true )
 	{
 		return wall_proxy();
 	}
-	
+	*/
 	return nowall_proxy();
 }
