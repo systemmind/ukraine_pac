@@ -12,7 +12,7 @@ function FindProxyForURL(url, host) {
 	if ( isPlainHostName(host) === true ) {
 		return nowall_proxy();
 	}
-	if ( dnsDomainIs(host, "vk.com") === true ) {
+	if ( dnsDomainIs(host, "yandex.ru") === true ) {
 		return wall_proxy();
 	}
 	return nowall_proxy();
