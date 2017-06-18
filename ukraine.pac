@@ -11,7 +11,12 @@ var ipv6_proxy = function(){ return wall_v6_proxy(); };
 var blocked_domains = [
 "yandex.ru",
 "mail.ru",
-"vk.com"
+"kaspersky.ru",
+"drweb.ru",
+"ok.ru",
+"kinopoisk.ru",
+"vk.com",
+"yandex.ua"
 ];
 
 function isHostBlocked(host) {
